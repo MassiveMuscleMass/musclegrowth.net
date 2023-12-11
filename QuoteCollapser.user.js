@@ -22,7 +22,7 @@ var quoteCollapserButtonPadding = 10; // Collapse/Expand button padding (in pixe
 var quoteCollapserButtonFontSize = 17; // Collapse/Expand button text font size (in pixels).
 var quoteCollapserButtonCollapsedText = "↓ Expand ↓"; // Collapse/Expand button text when the quote is collapsed.
 var quoteCollapserButtonExpandedText = "↑ Collapse ↑"; // Collapse/Expand button text when the quote is expanded.
-var removeSidebar = true; // If you want to remove sidebar, set this to true, otherwise set it to false;
+var removeSidebar = false; // If you want to remove sidebar, set this to true, otherwise set it to false;
 // --------------------
 
 

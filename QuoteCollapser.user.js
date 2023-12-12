@@ -36,7 +36,7 @@ const sidebarId = "ipsLayout_sidebar";
 // ----- Classes -----
 const quoteClass = "ipsQuote";
 const quoteContentClass = "ipsQuote_contents";
-const replyComposeAreaClass = "ipsComposeArea";
+const formClass = "ipsForm";
 const quoteCitationClass = "ipsQuote_citation";
 
 const quoteContentCollapsedClass = "quoteCollapserCollapsed";
@@ -156,14 +156,14 @@ function initializeButtons()
         function()
         {
             var height = $(this).height();
-            var replyParents = $(this).parents(`.${replyComposeAreaClass}`);
-            var quoteCollapserButtons = $(this).has(`.${quoteCollapserButtonClass}`);
+            var formParents = $(this).parents(`.${formClass}`);
+            var quoteCollapserButtons = $(this).find(`.${quoteCollapserButtonClass}`);
 
             var isQuoteLongerThanAllowedMaxHeight = height > quoteContentMaxHeight;
-            var isQuoteInReply = replyParents.length > 0;
+            var isQuoteInForm = formParents.length > 0;
             var doesQuoteAlreadyHaveButton = quoteCollapserButtons.length > 0;
 
-            var shouldAppendButton = isQuoteLongerThanAllowedMaxHeight && !doesQuoteAlreadyHaveButton && !isQuoteInReply;
+            var shouldAppendButton = isQuoteLongerThanAllowedMaxHeight && !doesQuoteAlreadyHaveButton && !isQuoteInForm;
             
             if(shouldAppendButton)
             {
@@ -189,7 +189,7 @@ function initializeButtons()
                 toggleCollapse(quoteContent);
             }
 
-            if(isQuoteInReply)
+            if(isQuoteInForm)
             {
                 var quoteCitation = $(this).children(`.${quoteCitationClass}`);
                 var quoteContent = quoteCitation.siblings(`.${quoteContentClass}`)[0];
@@ -198,6 +198,11 @@ function initializeButtons()
                 {
                     quoteCitation.addClass(quoteCollapserClass);
                     toggleCollapse(quoteContent);
+                }
+
+                if(doesQuoteAlreadyHaveButton)
+                {
+                    quoteCollapserButtons.remove();
                 }
             }
         }

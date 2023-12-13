@@ -1,4 +1,4 @@
-var css = 
+const css = 
 `
 <style>
 .ipsQuote_contents

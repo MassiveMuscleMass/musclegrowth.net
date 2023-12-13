@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         musclegrowth.net - Quote collapser
+// @name         musclegrowth.net Scripts
 // @namespace    https://github.com/MassiveMuscleMass
 // @version      1.0
 // @author       MassiveMuscleMass
@@ -65,8 +65,8 @@ function initializeCss()
 
 function initializeEvents()
 {
-    $("body").on("click",`div.${quoteCollapserButtonClass}`, function() { toggleCollapse($(this).siblings(`.${quoteContentClass}`)[0]); });
-    $("body").on("dblclick",`.${quoteCollapserClass}`, function() { toggleCollapse($(this).siblings(`.${quoteContentClass}`)[0]); });
+    $("body").on("click",`div.${quoteCollapserButtonClass}`, () => toggleCollapse($(this).siblings(`.${quoteContentClass}`)[0]));
+    $("body").on("dblclick",`.${quoteCollapserClass}`, () => toggleCollapse($(this).siblings(`.${quoteContentClass}`)[0]));
 }
 
 function initializeButtons()

@@ -12,12 +12,12 @@
 // @downloadURL  https://github.com/MassiveMuscleMass/musclegrowth.net/raw/main/QuoteCollapser.user.js
 // @updateURL    https://github.com/MassiveMuscleMass/musclegrowth.net/raw/main/QuoteCollapser.user.js
 
+// @require      https://github.com/MassiveMuscleMass/musclegrowth.net/raw/main/settings.js
 // @require      https://github.com/MassiveMuscleMass/musclegrowth.net/raw/main/classes.js
 // @require      https://github.com/MassiveMuscleMass/musclegrowth.net/raw/main/ids.js
 // @require      https://github.com/MassiveMuscleMass/musclegrowth.net/raw/main/helpers.js
 // @require      https://github.com/MassiveMuscleMass/musclegrowth.net/raw/main/html.js
 // @require      https://github.com/MassiveMuscleMass/musclegrowth.net/raw/main/css.js
-// @require      https://github.com/MassiveMuscleMass/musclegrowth.net/raw/main/settings.js
 // ==/UserScript==
 /* global $ */
 
